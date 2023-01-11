@@ -1,38 +1,49 @@
 ﻿<Properties StartupConfiguration="{E4B22F1A-82B2-4975-9D09-3243DE5DFF9E}|Default">
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/preethi/Projects/ElearningPortal/ElearningPortal/Program.cs" relfile="ElearningPortal/Program.cs" line="50" column="1" />
+      <Breakpoint file="/Users/preethi/Projects/ElearningPortal/ElearningPortal/Program.cs" relfile="ElearningPortal/Program.cs" line="43" column="1" />
+      <Breakpoint file="/Users/preethi/Projects/ElearningPortal/ElearningPortal/Program.cs" relfile="ElearningPortal/Program.cs" line="45" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningPortal/Data/ApplicationDbContext.cs">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningPortal/Program.cs">
     <Files>
-      <File FileName="ElearningPortal/Controllers/HomeController.cs" Line="3" Column="29" />
-      <File FileName="ElearningPortal/Models/UserModel.cs" Line="4" Column="14" />
+      <File FileName="ElearningPortal/Controllers/HomeController.cs" />
+      <File FileName="ElearningPortal/Models/UserModel.cs" Line="11" Column="6" />
       <File FileName="../ELearningApp/ELearningApp/Models/UserViewModel.cs" />
-      <File FileName="ElearningPortal/appsettings.Development.json" Line="1" Column="1" />
-      <File FileName="ElearningPortal/Data/ApplicationDbContext.cs" Line="14" Column="1" />
-      <File FileName="ElearningPortal/appsettings.json" Line="14" Column="1" />
-      <File FileName="ElearningPortal/Program.cs" Line="9" Column="67" />
-      <File FileName="ElearningPortal/Migrations/20230105095153_initail.cs" Line="1" Column="1" />
-      <File FileName="ElearningPortal/Migrations/ApplicationDbContextModelSnapshot.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/appsettings.Development.json" />
+      <File FileName="ElearningPortal/Data/ApplicationDbContext.cs" />
+      <File FileName="ElearningPortal/appsettings.json" Line="17" Column="1" />
+      <File FileName="ElearningPortal/Program.cs" Line="24" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230105095153_initail.cs" />
+      <File FileName="ElearningPortal/Migrations/ApplicationDbContextModelSnapshot.cs" />
+      <File FileName="ElearningPortal/Models/Login.cs" Line="7" Column="50" />
+      <File FileName="ElearningPortal/Controllers/LoginController.cs" Line="23" Column="9" />
+      <File FileName="ElearningPortal/Services/AuthService.cs" Line="46" Column="51" />
+      <File FileName="ElearningPortal/Migrations/20230110085447_added role in usermodel.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Services/UserService.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Services/IUserService.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Controllers/UserController.cs" Line="24" Column="10" />
+      <File FileName="ElearningPortal/Services/IAuthService.cs" Line="9" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ElearningPortal" expanded="True">
+          <Node name="ElearningPortal" expanded="True" selected="True">
             <Node name="ElearningPortal" expanded="True">
               <Node name="Dependencies" expanded="True">
                 <Node name="FrameworkReferences" expanded="True" />
-                <Node name="PackageDependencies" expanded="True" />
               </Node>
+              <Node name="config" expanded="True" />
               <Node name="Controllers" expanded="True" />
-              <Node name="Data" expanded="True">
-                <Node name="ApplicationDbContext.cs" selected="True" />
-              </Node>
+              <Node name="Data" expanded="True" />
               <Node name="Migrations" expanded="True" />
               <Node name="Models" expanded="True" />
+              <Node name="Properties" expanded="True" />
+              <Node name="Services" expanded="True" />
               <Node name="appsettings.json" expanded="True" />
             </Node>
           </Node>
@@ -40,4 +51,5 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -9,6 +9,7 @@ namespace ElearningPortal.Data
         {
         }
         public DbSet<UserModel>? UserModels { get; set; }
+        public DbSet<Course>? Courses { get; set; }
     }
 }
 
