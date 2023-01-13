@@ -7,10 +7,10 @@ using ElearningPortal.Models;
 
 namespace ElearningPortal.Services
 {
-	public class UserService: IUserService
+	public class AddUserService: IAddUserService
 	{
         private readonly ApplicationDbContext context;
-        public UserService(ApplicationDbContext _context)
+        public AddUserService(ApplicationDbContext _context)
 		{
             context = _context;
         }
@@ -27,6 +27,7 @@ namespace ElearningPortal.Services
             {
                 context.UserModels.Add(user);
                 await context.SaveChangesAsync();
+                Console.WriteLine(user.Role+"/.,,,./////,,,....");
                 return "User Registered Successfully";
 
             }

@@ -23,9 +23,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IAddUserService, AddUserService>();
 builder.Services.AddScoped<ICreateCourseService, CreateCourseService>();
-
+builder.Services.AddScoped<IListCourseService, ListCourseService>();
+builder.Services.AddScoped<IDeleteUserService, DeleteUserService>();
 
 // Add Authentication service
 //builder.Services.AddEndpointsApiExplorer();
@@ -46,6 +47,13 @@ builder.Services.AddAuthentication(options =>
             ValidateAudience = false
         };
     });
+
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("RequireAdministratorRole",
+         policy => policy.RequireRole("1","2","3"));
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

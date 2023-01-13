@@ -45,7 +45,8 @@ namespace ElearningPortal.Services
         {
             List<Claim> claims = new List<Claim>
             {
-                new Claim("Id",""+user.Id),
+                new Claim("Id",""+user.UserId),
+                new Claim("UserRole", ""+user.Role),
                 new Claim(ClaimTypes.Role, ""+user.Role)
             };
 

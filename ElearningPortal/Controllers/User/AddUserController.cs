@@ -7,19 +7,19 @@ using ElearningPortal.Models;
 using ElearningPortal.Services;
 namespace ElearningPortal.Controllers
 {
-    public class UserController : Controller
+    public class AddUserController : Controller
     {
-        private readonly IUserService _userService;
+        private readonly IAddUserService _addUserService;
 
-        public UserController(IUserService userService)
+        public AddUserController(IAddUserService addUserService)
         {
-            _userService = userService;
+            _addUserService = addUserService;
         }
         [HttpPost]
         [Route("api/register")]
         public Task<string> Register([FromBody] UserModel user)
         {
-            var response= _userService.Register(user);
+            var response= _addUserService.Register(user);
             return response;
             
         }

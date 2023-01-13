@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security.Claims;
 using ElearningPortal.Data;
 using ElearningPortal.Models;
 using ElearningPortal.Services;
@@ -14,11 +15,14 @@ namespace ElearningPortal.Services
             context = _context;
         }
 
+        
+
         public async Task<string> CreateCourse(Course course)
         {
             var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == course.CourseId);
             if(courseFound != null)
             {
+                Console.WriteLine("ClaimTypes.Role...."+ClaimTypes.Role); 
                 return "Course with this Id exixts already";
             }
             else
