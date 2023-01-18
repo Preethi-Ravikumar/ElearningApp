@@ -1,9 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ElearningPortal.Models;
 
-public class UserModel
+public class UserData
 {
     //public enum RoleType
     //{
@@ -17,10 +18,13 @@ public class UserModel
     public string UserName { get; set; } = null!;
     public string Email { get; set; } = null!;
     public string Password { get; set; } = null!;
-    public int Role { get; set; } = 3;
+    public string Role { get; set; } = "user";
     public byte isActive { get; set; } = 1;
+    //[ForeignKey("CourseId")]
+    //public int? CourseId { get; set; }
+
     //public List<int> CourseId { get; set; }
-    public virtual ICollection<Course>? Courses { get; set; }
+    //public virtual ICollection<Course>? Courses { get; set; }
 
     //public UserModel()
     //{

@@ -8,8 +8,10 @@ namespace ElearningPortal.Data
         public ApplicationDbContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<UserModel>? UserModels { get; set; }
+        public DbSet<UserData>? Users { get; set; }
         public DbSet<Course>? Courses { get; set; }
+        public DbSet<Enrollment>? Enrollments { get; set; }
+
     }
 }
 

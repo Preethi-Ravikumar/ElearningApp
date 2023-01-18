@@ -22,7 +22,7 @@ namespace ElearningPortal.Controllers
         }
         
         [HttpPost]
-        [Route("/api/login")]
+        [Route("/login")]
         public Task<string> Login([FromBody] Login authDetails)
         {
 

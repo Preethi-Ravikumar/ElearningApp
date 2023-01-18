@@ -23,10 +23,8 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddScoped<IAddUserService, AddUserService>();
-builder.Services.AddScoped<ICreateCourseService, CreateCourseService>();
-builder.Services.AddScoped<IListCourseService, ListCourseService>();
-builder.Services.AddScoped<IDeleteUserService, DeleteUserService>();
+builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICourseService, CourseService>();
 
 // Add Authentication service
 //builder.Services.AddEndpointsApiExplorer();
@@ -51,7 +49,7 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy("RequireAdministratorRole",
-         policy => policy.RequireRole("1","2","3"));
+         policy => policy.RequireRole("admin","trainingadmin","trainer"));
 });
 
 var app = builder.Build();

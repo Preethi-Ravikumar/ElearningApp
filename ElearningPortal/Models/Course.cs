@@ -1,5 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace ElearningPortal.Models
 {
 	public class Course
@@ -21,6 +23,8 @@ namespace ElearningPortal.Models
         public string Rating { get; set; } = null!;
         public int Price { get; set; }
         public byte isVerified { get; set; }
+        //[ForeignKey("UserId")]
+        //public int? UserId { get; set; }
 
         //public Course()
         //{

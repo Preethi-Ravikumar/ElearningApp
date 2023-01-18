@@ -24,7 +24,7 @@ namespace ElearningPortal.Services
 
         public async Task<string> Login([FromBody] Login authDetails)
         {
-            var userFound = await context.UserModels.FirstOrDefaultAsync(x => x.Email == authDetails.Email);
+            var userFound = await context.Users.FirstOrDefaultAsync(x => x.Email == authDetails.Email);
             if (userFound == null)
             {
                 return "User not found";
@@ -41,7 +41,7 @@ namespace ElearningPortal.Services
 
         }
 
-        private string CreateToken(UserModel user)
+        private string CreateToken(UserData user)
         {
             List<Claim> claims = new List<Claim>
             {

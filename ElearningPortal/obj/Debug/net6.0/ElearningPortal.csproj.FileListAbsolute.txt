@@ -9,6 +9,7 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Humanizer.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/MessagePack.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/MessagePack.Annotations.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.AspNetCore.Razor.Language.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.Build.dll
@@ -47,6 +48,7 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.NET.StringTools.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.OpenApi.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.VisualStudio.Debugger.Contracts.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
@@ -70,9 +72,15 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/NuGet.Protocol.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/NuGet.Versioning.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Pomelo.EntityFrameworkCore.MySql.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Scrutor.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/SQLitePCLRaw.batteries_v2.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/SQLitePCLRaw.core.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/SQLitePCLRaw.provider.e_sqlite3.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Annotations.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/System.Composition.AttributedModel.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/System.Composition.Convention.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/System.Composition.Hosting.dll
@@ -274,6 +282,7 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.AssemblyInfoInputs.cache
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.AssemblyInfo.cs
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.csproj.CoreCompileInputs.cache
+/Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.MvcApplicationPartsAssemblyInfo.cs
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.MvcApplicationPartsAssemblyInfo.cache
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.RazorAssemblyInfo.cache
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.RazorAssemblyInfo.cs
@@ -293,12 +302,3 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.pdb
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.genruntimeconfig.cache
 /Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ref/ElearningPortal.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Microsoft.OpenApi.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Scrutor.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Annotations.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Filters.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortal/obj/Debug/net6.0/ElearningPortal.MvcApplicationPartsAssemblyInfo.cs
