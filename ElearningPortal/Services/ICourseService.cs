@@ -8,6 +8,7 @@ namespace ElearningPortal.Services
         public Task<string> CreateCourse(Course course);
         public List<Course> ListCourse();
         public Task<Course> ListCourseById(int courseId);
+        public Task<string> UpdateCourse(int courseId, Course course);
         public Task<string> DeleteCourse(int id);
         public List<Course> CourseToApprove();
         public Task<string> Publish(PublishCourse publishCourse);

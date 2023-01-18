@@ -3,6 +3,7 @@ using ElearningPortal.Data;
 using ElearningPortal.Models;
 using System.Security.Claims;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ElearningPortal.Services
 {
@@ -35,14 +36,68 @@ namespace ElearningPortal.Services
             return context.Courses.Where(x => x.isVerified == 1).ToList();
         }
 
-        public Task<Course> ListCourseById(int courseId)
+        public async Task<Course> ListCourseById(int courseId)
         {
-            var courseFound = context.Courses.FirstOrDefaultAsync(x => x.CourseId == courseId);
+            var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == courseId);
             if (courseFound != null)
             {
                 return courseFound;
             }
+            //else if(courseFound.isVerified == 0)
+            //{
+            //    return "Course not found";
+            //}
+            //else
+            //{
+            //    return "Course not found";
+            //}
+            
             return null;
+        }
+        
+        public async Task<string> UpdateCourse(int courseId, Course course)
+        {
+            var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == courseId);
+            byte updated = 0;
+            if (course.CourseName != null)
+            {
+                courseFound.CourseName = course.CourseName;
+                updated = 1;
+            }
+            if (course.InstructorName != null)
+            {
+                courseFound.InstructorName = course.InstructorName;
+                updated = 1;
+            }
+            if (course.CourseDuration != null)
+            {
+                courseFound.CourseDuration = course.CourseDuration;
+                updated = 1;
+            }
+            if (course.Description != null)
+            {
+                courseFound.Description = course.Description;
+                updated = 1;
+            }
+            if (course.Level != null)
+            {
+                courseFound.Level = course.Level;
+                updated = 1;
+            }
+            if (course.Price != null)
+            {
+                courseFound.Price = course.Price;
+                updated = 1;
+            }
+            if (updated == 0)
+            {
+                return "Nothing to update";
+            }
+            else
+            {
+                return "Updated successfully";
+            }
+
         }
 
         public async Task<string> DeleteCourse(int id)

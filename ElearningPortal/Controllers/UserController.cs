@@ -7,6 +7,8 @@ using ElearningPortal.Models;
 using ElearningPortal.Services;
 using Microsoft.AspNetCore.Authorization;
 using System.Security.Claims;
+using Microsoft.CodeAnalysis.Scripting;
+//using bcrypt = BCrypt.Net.BCrypt;
 
 namespace ElearningPortal.Controllers
 {
@@ -22,6 +24,7 @@ namespace ElearningPortal.Controllers
         [Route("/register")]
         public Task<string> Register([FromBody] UserData user)
         {
+            //user.Password = bcrypt.HashPassword(user.Password, 12);
             var response= _userService.Register(user);
             return response;
             
@@ -80,8 +83,8 @@ namespace ElearningPortal.Controllers
         }
 
         [HttpPost]
-        [Route("/user/enroll"), Authorize(Roles = "user")]
-        public Task<string> Enroll([FromBody] int courseId)
+        [Route("/user/enroll/{courseId}"), Authorize(Roles = "user")]
+        public Task<string> Enroll(int courseId)
         {
             var userId = payloadData();
             return _userService.Enroll(userId, courseId);

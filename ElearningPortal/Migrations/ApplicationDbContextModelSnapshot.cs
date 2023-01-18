@@ -48,11 +48,7 @@ namespace ElearningPortal.Migrations
                     b.Property<int>("Price")
                         .HasColumnType("int");
 
-                    b.Property<string>("Rating")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("StudentsEnrolled")
+                    b.Property<int?>("StudentsEnrolled")
                         .HasColumnType("int");
 
                     b.Property<byte>("isVerified")
@@ -79,6 +75,10 @@ namespace ElearningPortal.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("EnrollmentId");
+
+                    b.HasIndex("CourseId");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Enrollments");
                 });
@@ -111,6 +111,23 @@ namespace ElearningPortal.Migrations
                     b.HasKey("UserId");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("ElearningPortal.Models.Enrollment", b =>
+                {
+                    b.HasOne("ElearningPortal.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("ElearningPortal.Models.UserData", "UserData")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("Course");
+
+                    b.Navigation("UserData");
                 });
 #pragma warning restore 612, 618
         }

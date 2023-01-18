@@ -1,21 +1,37 @@
 ﻿<Properties StartupConfiguration="{E4B22F1A-82B2-4975-9D09-3243DE5DFF9E}|Default">
-  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningPortal/Services/UserService.cs">
+    <Files>
+      <File FileName="ElearningPortal/Controllers/UserController.cs" Line="89" Column="1" />
+      <File FileName="ElearningPortal/Services/UserService.cs" Line="107" Column="14" />
+      <File FileName="ElearningPortal/Models/Enrollment.cs" Line="17" Column="40" />
+      <File FileName="ElearningPortal/Data/ApplicationDbContext.cs" Line="15" Column="6" />
+      <File FileName="ElearningPortal/Services/IUserService.cs" Line="13" Column="62" />
+      <File FileName="ElearningPortal/Controllers/CourseController.cs" Line="53" Column="61" />
+      <File FileName="ElearningPortal/Migrations/20230118044509_altered enrollment table.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Program.cs" Line="80" Column="1" />
+      <File FileName="ElearningPortal/Models/Course.cs" Line="28" Column="20" />
+      <File FileName="ElearningPortal/Services/CourseService.cs" Line="50" Column="96" />
+      <File FileName="ElearningPortal/Services/ICourseService.cs" Line="11" Column="50" />
+      <File FileName="ElearningPortal/Models/UserData.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230118073622_foreign key added in enrollment.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Models/ErrorViewModel.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Models/Login.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Models/PublishCourse.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230118092508_Tables created.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230118093017_Altered course table.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230118093017_Altered course table.Designer.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Migrations/20230118093751_Tables created.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Models/UserEditor.cs" Line="1" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="ElearningPortal" expanded="True">
+          <Node name="ElearningPortal" expanded="True" selected="True">
             <Node name="ElearningPortal" expanded="True">
               <Node name="Dependencies" expanded="True" />
               <Node name="config" expanded="True" />
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
-              <Node name="Migrations" expanded="True">
-                <Node name="20230111130840_altered schema.cs" selected="True" />
-              </Node>
               <Node name="Models" expanded="True" />
               <Node name="Properties" expanded="True" />
               <Node name="Services" expanded="True" />
@@ -24,12 +40,13 @@
           </Node>
         </State>
       </Pad>
-      <Pad Id="MonoDevelop.Debugger.WatchPad">
-        <State />
-      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

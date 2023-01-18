@@ -46,6 +46,15 @@ namespace ElearningPortal.Controllers.Admin
             return _courseService.ListCourseById(courseId);
         }
 
+        [HttpPut]
+        [Route("/course/{CourseId}"), Authorize(Roles = "admin,trainingadmin")]
+        public Task<string> UpdateCourse(int courseId, [FromBody] Course course)
+        {
+            var response = _courseService.UpdateCourse(courseId, course);
+            return response;
+
+        }
+
         [HttpDelete]
         [Route("/course/{CourseId}"), Authorize(Roles = "admin")]
         public Task<string> DeleteUser(int courseId)

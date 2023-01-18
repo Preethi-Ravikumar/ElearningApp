@@ -88,10 +88,23 @@ namespace ElearningPortal.Services
 
         public async Task<string> Enroll(int userId, int courseId)
         {
-            //List<Enrollment> userFound = context.Enrollments.Where(x => x.UserId == userId).ToList();
-            //foreach(int id in userFound)
-            //{
-            //}
+            var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == courseId);
+            if(courseFound == null)
+            {
+                return "Course not found";
+            }
+            else if(courseFound.isVerified == 0)
+            {
+                return "Course not found";
+            }
+            List<Enrollment> userFound = context.Enrollments.Where(x => x.UserId == userId).ToList();
+            foreach (var user in userFound)
+            {
+                if (user.UserId == userId && user.CourseId == courseId)
+                {
+                    return "Already enrolled";
+                }
+            }
             var entry = new Enrollment { UserId = userId, CourseId = courseId};
             context.Enrollments.Add(entry);
             await context.SaveChangesAsync();
