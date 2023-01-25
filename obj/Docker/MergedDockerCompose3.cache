@@ -1,0 +1,46 @@
+name: dockercompose17918427093593625862
+services:
+  db:
+    container_name: elearning-db
+    environment:
+      MYSQL_DATABASE: elearningDb
+      MYSQL_PASSWORD: mysql@123
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+      MYSQL_USER: dbuser
+    image: mysql
+    networks:
+      default: null
+  elearningportal:
+    build:
+      context: /Users/preethi/Projects/ElearningPortal
+      dockerfile: ElearningPortal/Dockerfile
+    container_name: elearning-portal
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_URLS: https://+:443;http://+:80
+    image: elearningportal
+    networks:
+      default: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 443
+      protocol: tcp
+    volumes:
+    - type: bind
+      source: /Users/preethi/.aspnet/https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: /Users/preethi/.microsoft/usersecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+networks:
+  default:
+    name: dockercompose17918427093593625862_default

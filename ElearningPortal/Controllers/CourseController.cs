@@ -7,7 +7,7 @@ using ElearningPortal.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace ElearningPortal.Controllers.Admin
+namespace ElearningPortal.Controllers
 {
 	public class CourseController : Controller
 	{
@@ -34,9 +34,14 @@ namespace ElearningPortal.Controllers.Admin
 
         [HttpGet]
         [Route("/course")]
-        public List<Course> ListCourse()
+        public async Task<IActionResult> ListCourse()
         {
-            return _courseService.ListCourse();
+            var response = _courseService.ListCourse();
+            if(response.Count == 0)
+            {
+                return NoContent();
+            }
+            return Ok(response);
         }
 
         [HttpGet]

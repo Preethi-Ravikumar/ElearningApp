@@ -1,0 +1,32 @@
+version: '3.4'
+
+networks:
+  elearningportal:
+
+services:
+  db:
+    container_name: elearning-db
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql@123
+    ports:
+      - 33060:3306
+    networks:
+      - elearningportal
+       
+  elearningportal:
+    container_name: elearning-portal
+    image: ${DOCKER_REGISTRY-}elearningportal
+    build:
+      context: .
+      dockerfile: ElearningPortal/Dockerfile
+    ports:
+      - 8005:80
+    networks:
+      - elearningportal
+    environment:
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=mysql@123
+      - DB_NAME=elearningDb
