@@ -13,17 +13,24 @@ using ElearningPortal.Models;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
 
-var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
-var dbUser = Environment.GetEnvironmentVariable("DB_USER");
-var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
-var dbName = Environment.GetEnvironmentVariable("DB_NAME");
+//var dbHost = Environment.GetEnvironmentVariable("DB_HOST");
+//var dbUser = Environment.GetEnvironmentVariable("DB_USER");
+//var dbPassword = Environment.GetEnvironmentVariable("DB_PASSWORD");
+//var dbName = Environment.GetEnvironmentVariable("DB_NAME");
 
-var connectionString = $"server={dbHost}; user={dbUser}; password={dbPassword}; database={dbName}";
+var dbHost = "portal-database.cdgkfoacvf6u.us-east-1.rds.amazonaws.com";
+var dbUser = "root";
+var dbPassword = "mysql1234";
+var dbName = "portal-database";
+var dbPort = "3306";
+
+var connectionString = $"server={dbHost}; user={dbUser}; password={dbPassword}; database={dbName}; port={dbPort}";
 var serverVersion = new MySqlServerVersion(new Version(8, 0, 31));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
+    Console.WriteLine("connection string:" + connectionString);
     object value = options.UseMySql(connectionString, serverVersion);
 });
 

@@ -44,6 +44,7 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.DotNet.Scaffolding.Shared.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Sqlite.dll
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
@@ -376,4 +377,3 @@
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/obj/Debug/net6.0/ElearningPortalTests.pdb
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/obj/Debug/net6.0/ElearningPortalTests.genruntimeconfig.cache
 /Users/preethi/Projects/ElearningPortal/ElearningPortalTests/obj/Debug/net6.0/ref/ElearningPortalTests.dll
-/Users/preethi/Projects/ElearningPortal/ElearningPortalTests/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll

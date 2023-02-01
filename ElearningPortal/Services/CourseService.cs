@@ -17,41 +17,65 @@ namespace ElearningPortal.Services
 
         public async Task<string> CreateCourse(Course course)
         {
-            var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == course.CourseId);
-            if (courseFound != null)
+            if (course.CourseName.Length == 0)
             {
-                Console.WriteLine("ClaimTypes.Role...." + ClaimTypes.Role);
-                return "Course with this Id exixts already";
+                return "Course name cannot be empty";
             }
-            else
+            if (course.InstructorName.Length == 0)
             {
-                context.Courses.Add(course);
-                await context.SaveChangesAsync();
-                return "Course Added successfully";
+                return "Instructor name cannot be empty";
+            }
+            if (course.CourseDuration.Length == 0)
+            {
+                return "Course duration cannot be empty";
+            }
+            if (course.Description.Length == 0)
+            {
+                return "Course description cannot be empty";
+            }
+            else if(course.Description.Length < 10)
+            {
+                return "Course description should have atleast 10 characters";
+            }
+            if(course.Price < 0)
+            {
+                return "Price cannot be less than 0";
+            }
+            try
+            {
+                var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == course.CourseId);
+                if (courseFound != null)
+                {
+                    Console.WriteLine("ClaimTypes.Role...." + ClaimTypes.Role);
+                    return "Course with this Id exixts already";
+                }
+                else
+                {
+                    context.Courses.Add(course);
+                    await context.SaveChangesAsync();
+                    return "Course Added successfully";
+                }
+            }
+            catch(Exception e)
+            {
+                throw new Exception("Some error occurred... " + e.Message);
             }
         }
 
-        public List<Course> ListCourse()
+        public async Task<List<Course>> ListCourse()
         {
-            return context.Courses.Where(x => x.isVerified == 1).ToList();
+            return await context.Courses.Where(x => x.isVerified == 1).ToListAsync();
+            //return await context.Courses.ToListAsync();
         }
 
         public async Task<Course> ListCourseById(int courseId)
         {
             var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == courseId);
-            if (courseFound != null)
+            if (courseFound != null && courseFound.isVerified == 1)
             {
                 return courseFound;
             }
-            //else if(courseFound.isVerified == 0)
-            //{
-            //    return "Course not found";
-            //}
-            //else
-            //{
-            //    return "Course not found";
-            //}
-            
+            //return new{ Message = "Course not found with this id" };
             return null;
         }
         
@@ -103,7 +127,7 @@ namespace ElearningPortal.Services
         public async Task<string> DeleteCourse(int id)
         {
             var courseFound = await context.Courses.FirstOrDefaultAsync(x => x.CourseId == id);
-            if (courseFound != null)
+            if (courseFound != null && courseFound.isVerified==1)
             {
                 courseFound.isVerified = 0;
                 await context.SaveChangesAsync();

@@ -1,5 +1,18 @@
 name: dockercompose17918427093593625862
 services:
+  db:
+    container_name: elearning-db
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql@123
+    image: mysql:latest
+    networks:
+      elearningportal: null
+    ports:
+    - mode: ingress
+      target: 3306
+      published: "33060"
+      protocol: tcp
+    restart: always
   elearningportal:
     build:
       context: /Users/preethi/Projects/ElearningPortal
@@ -8,7 +21,7 @@ services:
         com.microsoft.created-by: visual-studio
         com.microsoft.visual-studio.project-name: ElearningPortal
       target: base
-    container_name: ElearningPortal
+    container_name: elearning-portal
     entrypoint:
     - tail
     - -f
@@ -17,6 +30,10 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
       ASPNETCORE_URLS: https://+:443;http://+:80
+      DB_HOST: db
+      DB_NAME: elearningDb
+      DB_PASSWORD: mysql@123
+      DB_USER: root
       DOTNET_USE_POLLING_FILE_WATCHER: "1"
       NUGET_FALLBACK_PACKAGES: ""
     image: elearningportal:dev
@@ -27,10 +44,14 @@ services:
       com.microsoft.visualstudio.debuggee.program: dotnet
       com.microsoft.visualstudio.debuggee.workingdirectory: /app
     networks:
-      default: null
+      elearningportal: null
     ports:
     - mode: ingress
       target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8005"
       protocol: tcp
     - mode: ingress
       target: 443
@@ -71,5 +92,5 @@ services:
       bind:
         create_host_path: true
 networks:
-  default:
-    name: dockercompose17918427093593625862_default
+  elearningportal:
+    name: dockercompose17918427093593625862_elearningportal

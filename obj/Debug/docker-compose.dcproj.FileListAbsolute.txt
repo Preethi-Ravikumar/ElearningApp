@@ -1,4 +1,3 @@
-/Users/preethi/Projects/ElearningPortal/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
 /Users/preethi/Projects/ElearningPortal/bin/Debug/ElearningPortal.deps.json
 /Users/preethi/Projects/ElearningPortal/bin/Debug/ElearningPortal.runtimeconfig.json
 /Users/preethi/Projects/ElearningPortal/bin/Debug/appsettings.Development.json
@@ -22,4 +21,5 @@
 /Users/preethi/Projects/ElearningPortal/bin/Debug/Microsoft.IdentityModel.JsonWebTokens.dll
 /Users/preethi/Projects/ElearningPortal/bin/Debug/ElearningPortal.pdb
 /Users/preethi/Projects/ElearningPortal/obj/Debug/docker-compose.dcproj.AssemblyReference.cache
+/Users/preethi/Projects/ElearningPortal/obj/Debug/docker-compose.dcproj.CoreCompileInputs.cache
 /Users/preethi/Projects/ElearningPortal/obj/Debug/docker-compose.dcproj.CopyComplete

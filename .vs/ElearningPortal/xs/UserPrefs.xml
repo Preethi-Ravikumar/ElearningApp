@@ -1,40 +1,59 @@
 ﻿<Properties StartupConfiguration="{9BAF7895-4305-4507-A1D0-933227C99E05}|Default">
+  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.ElearningPortalTests PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="docker-compose.yml">
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ElearningPortal/Program.cs">
     <Files>
-      <File FileName="ElearningPortal/Controllers/UserController.cs" />
-      <File FileName="ElearningPortal/Services/UserService.cs" Line="107" Column="14" />
-      <File FileName="ElearningPortal/Models/Enrollment.cs" />
-      <File FileName="ElearningPortal/Data/ApplicationDbContext.cs" />
-      <File FileName="ElearningPortal/Services/IUserService.cs" />
-      <File FileName="ElearningPortal/Controllers/CourseController.cs" />
-      <File FileName="ElearningPortal/Program.cs" Line="18" Column="90" />
-      <File FileName="ElearningPortal/Models/Course.cs" />
-      <File FileName="ElearningPortal/Services/CourseService.cs" />
-      <File FileName="ElearningPortal/Services/ICourseService.cs" />
+      <File FileName="docker-compose.yml" Line="32" Column="28" />
+      <File FileName="ElearningPortal/Controllers/UserController.cs" Line="74" Column="36" />
+      <File FileName="ElearningPortal/Properties/launchSettings.json" />
+      <File FileName="ElearningPortal/Program.cs" Line="17" Column="1" />
       <File FileName="ElearningPortal/Models/UserData.cs" />
-      <File FileName="ElearningPortal/Models/ErrorViewModel.cs" />
-      <File FileName="ElearningPortal/Models/Login.cs" />
-      <File FileName="ElearningPortal/Models/PublishCourse.cs" />
-      <File FileName="ElearningPortal/Migrations/20230118093751_Tables created.cs" />
-      <File FileName="ElearningPortal/Models/UserEditor.cs" />
-      <File FileName="ElearningPortalTests/Systems/Services/TestCourseService.cs" Line="56" Column="30" />
-      <File FileName="ElearningPortalTests/MockData/CourseMockData.cs" Line="5" Column="15" />
-      <File FileName="ElearningPortal/Dockerfile" Line="18" Column="1" />
+      <File FileName="ElearningPortal/Data/ApplicationDbContext.cs" Line="18" Column="1" />
+      <File FileName="ElearningPortal/Models/Course.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/appsettings.json" Line="14" Column="4" />
+      <File FileName="ElearningPortal/Controllers/CourseController.cs" Line="28" Column="25" />
+      <File FileName="ElearningPortal/Services/CourseService.cs" Line="67" Column="86" />
+      <File FileName="ElearningPortalTests/Systems/Services/TestCourseService.cs" Line="28" Column="70" />
+      <File FileName="ElearningPortalTests/MockData/CourseMockData.cs" Line="26" Column="49" />
+      <File FileName="ElearningPortal/Dockerfile" Line="23" Column="1" />
+      <File FileName="ElearningPortal/Services/UserService.cs" Line="28" Column="50" />
+      <File FileName="ElearningPortal/Migrations/20230118093751_Tables created.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortal/Models/CourseEditor.cs" Line="1" Column="1" />
+      <File FileName="ElearningPortalTests/Systems/Controllers/TestCourseController.cs" Line="1" Column="1" />
       <File FileName=".dockerignore" Line="1" Column="1" />
-      <File FileName="docker-compose.yml" Line="29" Column="14" />
-      <File FileName="ElearningPortal/appsettings.json" Line="17" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ElearningPortal" expanded="True">
-            <Node name="docker-compose" expanded="True">
-              <Node name="docker-compose.yml" selected="True" />
+            <Node name="docker-compose" expanded="True" />
+            <Node name="ElearningPortal" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Migrations" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Program.cs" selected="True" />
             </Node>
-            <Node name="ElearningPortal" expanded="True" />
+            <Node name="ElearningPortalTests" expanded="True">
+              <Node name="MockData" expanded="True" />
+              <Node name="Systems" expanded="True">
+                <Node name="Controllers" expanded="True" />
+                <Node name="Services" expanded="True" />
+              </Node>
+            </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>return</Value>
         </State>
       </Pad>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
@@ -44,10 +63,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.ItemProperties.ElearningPortal PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

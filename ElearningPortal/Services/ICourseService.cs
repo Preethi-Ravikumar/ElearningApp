@@ -5,13 +5,13 @@ namespace ElearningPortal.Services
 {
 	public interface ICourseService
 	{
-        public Task<string> CreateCourse(Course course);
-        public List<Course> ListCourse();
-        public Task<Course> ListCourseById(int courseId);
-        public Task<string> UpdateCourse(int courseId, Course course);
-        public Task<string> DeleteCourse(int id);
-        public List<Course> CourseToApprove();
-        public Task<string> Publish(PublishCourse publishCourse);
+        Task<string> CreateCourse(Course course);
+        Task<List<Course>> ListCourse();
+        Task<Course> ListCourseById(int courseId);
+        Task<string> UpdateCourse(int courseId, Course course);
+        Task<string> DeleteCourse(int id);
+        List<Course> CourseToApprove();
+        Task<string> Publish(PublishCourse publishCourse);
     }
 }
 

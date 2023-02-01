@@ -15,7 +15,8 @@ namespace ElearningPortalTests.MockData
 					InstructorName="Sam",
 					CourseDuration="3hr 30mins",
 					Description="This course introduces computer programming using the JAVA programming language with object-oriented programming principles.",
-					Price=499
+					Price=499,
+                    isVerified=1
 				},
                 new Course
                 {
@@ -24,7 +25,8 @@ namespace ElearningPortalTests.MockData
                     InstructorName="Henry",
                     CourseDuration="3hr 30mins",
                     Description="This course introduces computer programming using the C programming language.",
-                    Price=499
+                    Price=499,
+                    isVerified=1
                 }
             };
 		}
@@ -32,7 +34,7 @@ namespace ElearningPortalTests.MockData
 		public static List<Course> GetEmptyCourses()
 		{
 			return new List<Course>();
-		}
+        }
 
         public static Course NewCourse()
         {
@@ -44,6 +46,66 @@ namespace ElearningPortalTests.MockData
                 CourseDuration = "3hr 30mins",
                 Description="This course introduces computer programming using the C# programming language.",
                 Price=499
+            };
+        }
+
+        public static Course EmptyCourseName()
+        {
+            return new Course
+            {
+                CourseName = "",
+                InstructorName = "Sam",
+                CourseDuration = "3hr 30mins",
+                Description = "This course introduces computer programming using the C# programming language.",
+                Price = 499
+            };
+        }
+
+        public static Course EmptyInstructorName()
+        {
+            return new Course
+            {
+                CourseName = "Java",
+                InstructorName = "",
+                CourseDuration = "3hr 30mins",
+                Description = "This course introduces computer programming using the C# programming language.",
+                Price = 499
+            };
+        }
+
+        public static Course EmptyCourseDuration()
+        {
+            return new Course
+            {
+                CourseName = "Java",
+                InstructorName = "Sam",
+                CourseDuration = "",
+                Description = "This course introduces computer programming using the C# programming language.",
+                Price = 499
+            };
+        }
+
+        public static Course EmptyDescription()
+        {
+            return new Course
+            {
+                CourseName = "Java",
+                InstructorName = "Sam",
+                CourseDuration = "3hrs 30 mins",
+                Description = "",
+                Price = 499
+            };
+        }
+
+        public static Course InsufficientDescription()
+        {
+            return new Course
+            {
+                CourseName = "C",
+                InstructorName = "Sam",
+                CourseDuration = "3hrs 30mins",
+                Description = "C course",
+                Price = 499
             };
         }
     }
